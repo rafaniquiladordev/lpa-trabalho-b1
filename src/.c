@@ -2,12 +2,12 @@
 
 float calcularValorBase(float *distancia);
 float calcularAdicionarPeso(float *peso, float *subtotal);
-float calcularAdicionalModalidade(int *modalidade, float *subtotal);
+float calcularAdicionarModalidade(int *modalidade, float *subtotal);
 
 float calcularValorFinal(
 float *subtotal,
-float *adicionalPeso,
-float *adicionalModalidade,
+float *adicionarPeso,
+float *adicionarModalidade,
 int *protecao,
 int *tentativas
 );
@@ -23,8 +23,8 @@ int *tentativas
 void mostrarCalculo(
 float *valorBase,
 float *subtotal,
-float *adicionalPeso,
-float *adicionalModalidade,
+float *adicionarPeso,
+float *adicionarModalidade,
 float *valorProtecao,
 float *valorTentativas
 );
@@ -163,7 +163,7 @@ do {
         &subtotal
     );
 
-    adicionarModalidade = calcularAdicionalModalidade(
+    adicionarModalidade = calcularAdicionarModalidade(
         &modalidade,
         &subtotal
     );
@@ -356,7 +356,7 @@ return *subtotal * percentual;
 FUNCAO DO ADICIONAL DA MODALIDADE
 ========================================== */
 
-float calcularAdicionalModalidade(
+float calcularAdicionarModalidade(
 int *modalidade,
 float *subtotal
 ) {
@@ -408,8 +408,8 @@ valorTentativas = *tentativas * 4.00;
 
 
 return *subtotal
-       + *adicionalPeso
-       + *adicionalModalidade
+       + *adicionarPeso
+       + *adicionarModalidade
        + valorProtecao
        + valorTentativas;
 
@@ -475,8 +475,8 @@ FUNCAO PARA MOSTRAR OS CALCULOS
 void mostrarCalculo(
 float *valorBase,
 float *subtotal,
-float *adicionalPeso,
-float *adicionalModalidade,
+float *adicionarPeso,
+float *adicionarModalidade,
 float *valorProtecao,
 float *valorTentativas
 ) {
@@ -500,13 +500,13 @@ printf(
 
 printf(
     "Adicional de peso: R$ %.2f\n",
-    *adicionalPeso
+    *adicionarPeso
 );
 
 
 printf(
     "Adicional da modalidade: R$ %.2f\n",
-    *adicionalModalidade
+    *adicionarModalidade
 );
 
 
