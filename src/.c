@@ -4,7 +4,7 @@ float calcularValorBase(float distancia);
 float calcularAdicionarPeso(float peso, float subtotal);
 float calcularAdicionalModalidade(int modalidade, float subtotal);
 float calcularValorFinal(float subtotal, float adicionalPeso,
-                         float adicionalModalidade, int protecao,
+                         float adicionarModalidade, int protecao,
                          int tentativas);
 
 int main() {
@@ -13,7 +13,7 @@ int main() {
     float peso;
     float subtotal;
     float adicionarPeso;
-    float adicionalModalidade;
+    float adicionarModalidade;
     float valorFinal;
     float valorBase;
 
@@ -111,7 +111,7 @@ int main() {
         adicionarPeso = calcularAdicionarPeso(peso, subtotal);
 
         adicionalModalidade =
-            calcularAdicionalModalidade(modalidade, subtotal);
+            calcularAdicionarModalidade(modalidade, subtotal);
 
         valorFinal = calcularValorFinal(
             subtotal,
@@ -234,7 +234,7 @@ float calcularAdicionarPeso(float peso, float subtotal) {
 
 
 /* Funcao que calcula o adicional da modalidade */
-float calcularAdicionalModalidade(int modalidade, float subtotal) {
+float calcularAdicionalrodalidade(int modalidade, float subtotal) {
 
     float percentual;
 
@@ -252,7 +252,7 @@ float calcularAdicionalModalidade(int modalidade, float subtotal) {
 
 /* Funcao que calcula o valor final */
 float calcularValorFinal(float subtotal, float adicionarPeso,
-                         float adicionalModalidade, int protecao,
+                         float adicionarModalidade, int protecao,
                          int tentativas) {
 
     float valorProtecao = 0.00;
@@ -267,7 +267,7 @@ float calcularValorFinal(float subtotal, float adicionarPeso,
     
     return subtotal
            + adicionarPeso
-           + adicionalModalidade
+           + adicionarModalidade
            + valorProtecao
            + valorTentativas;
     
