@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 float calcularValorBase(float distancia);
-float calcularAdicionalPeso(float peso, float subtotal);
+float calcularAdicionarPeso(float peso, float subtotal);
 float calcularAdicionalModalidade(int modalidade, float subtotal);
 float calcularValorFinal(float subtotal, float adicionalPeso,
                          float adicionalModalidade, int protecao,
@@ -12,7 +12,7 @@ int main() {
     float distancia;
     float peso;
     float subtotal;
-    float adicionalPeso;
+    float adicionarPeso;
     float adicionalModalidade;
     float valorFinal;
     float valorBase;
@@ -108,7 +108,7 @@ int main() {
 
         subtotal = valorBase + (distancia * 1.20);
 
-        adicionalPeso = calcularAdicionalPeso(peso, subtotal);
+        adicionarPeso = calcularAdicionarPeso(peso, subtotal);
 
         adicionalModalidade =
             calcularAdicionalModalidade(modalidade, subtotal);
@@ -215,7 +215,7 @@ float calcularValorBase(float distancia) {
 
 
 /* Funcao que calcula o adicional de peso */
-float calcularAdicionalPeso(float peso, float subtotal) {
+float calcularAdicionarPeso(float peso, float subtotal) {
 
     float percentual;
 
@@ -251,7 +251,7 @@ float calcularAdicionalModalidade(int modalidade, float subtotal) {
 
 
 /* Funcao que calcula o valor final */
-float calcularValorFinal(float subtotal, float adicionalPeso,
+float calcularValorFinal(float subtotal, float adicionarPeso,
                          float adicionalModalidade, int protecao,
                          int tentativas) {
 
@@ -264,9 +264,9 @@ float calcularValorFinal(float subtotal, float adicionalPeso,
     }
 
      valorTentativas = tentativas  * 4.00;
-    // proteçao //
+    
     return subtotal
-           + adicionalPeso
+           + adicionarPeso
            + adicionalModalidade
            + valorProtecao
            + valorTentativas;
