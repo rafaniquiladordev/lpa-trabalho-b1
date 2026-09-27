@@ -57,8 +57,7 @@ gcc -Wall -o main src/main.c
 ```
 ./main
 ```
-No Windows, compile com o mesmo comando (usando MinGW, por exemplo) e
-execute com `main.exe`.
+
 
 ## Uso de Inteligência Artificial
 Utilizei da ferramenta do Chatgpt para me ajudar a construir o código, tendo correção de linhas do código, como parâmetros, sintaxe e organização geral baseado na linguagem C.
